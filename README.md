@@ -1,7 +1,7 @@
 # 🛡️ КиберСигурност - Уебсайт за Киберсигурностен Бизнес
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Website](https://img.shields.io/website?url=https://github.com/MaciPatrona)](https://github.com/MaciPatrona)
+[![Website](https://img.shields.io/website?url=https://github.com/MaciPatrona)](https://sigurnosystems.free.bg/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/MaciPatrona)
 
 Модерен, отзивчив уебсайт за киберсигурностен бизнес, създаден с HTML, CSS и JavaScript. Този проект предоставя професионална платформа за представяне на киберсигурностни услуги и решения.

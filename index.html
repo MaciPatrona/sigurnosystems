@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="КиберСигурност - Вашият надежден партньор в дигиталната защита. Специализирани решения за малки и средни предприятия в област Плевен.">
+    <meta name="keywords" content="киберсигурност, защита на данни, ИТ сигурност, Плевен, бизнес защита">
+    <meta name="author" content="КиберСигурност">
+    <meta property="og:title" content="КиберСигурност - Защита за Вашия Бизнес">
+    <meta property="og:description" content="Професионални решения за киберсигурност за малки и средни предприятия">
+    <meta property="og:image" content="https://cybersecurity.bg/images/og-image.jpg">
+    <meta property="og:url" content="https://cybersecurity.bg">
+    <title>КиберСигурност - Защита за Вашия Бизнес | ИТ Сигурност в Плевен</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2c3e50',
+                        secondary: '#3498db',
+                        accent: '#e74c3c',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    /* Анимация за чатбот прозореца */
+    .chatbot-animate {
+        animation: chatbotOpen 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    @keyframes chatbotOpen {
+        0% { opacity: 0; transform: scale(0.9) translateY(40px); }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Навигация -->
+    <nav class="navbar bg-white shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-4">
+                    <div class="logo flex items-center space-x-2">
+                        <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                        <span class="text-xl font-bold text-primary">КиберСигурност</span>
+                    </div>
+                </div>
+                <ul class="nav-links hidden md:flex space-x-8">
+                    <li><a href="#home" class="text-gray-700 hover:text-secondary transition" data-i18n="nav-home">Начало</a></li>
+                    <li><a href="#services" class="text-gray-700 hover:text-secondary transition" data-i18n="nav-services">Услуги</a></li>
+                    <li><a href="#about" class="text-gray-700 hover:text-secondary transition" data-i18n="nav-about">За нас</a></li>
+                    <li><a href="#blog" class="text-gray-700 hover:text-secondary transition" data-i18n="nav-blog">Блог</a></li>
+                    <li><a href="#portfolio" class="text-gray-700 hover:text-secondary transition" data-i18n="nav-portfolio">Портфолио</a></li>
+                    <li><a href="#partners" class="text-gray-700 hover:text-secondary transition" data-i18n="nav-partners">Партньори</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-secondary transition" data-i18n="nav-contact">Контакти</a></li>
+                </ul>
+                <div class="burger md:hidden">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Начална страница -->
+    <section id="home" class="hero min-h-screen flex items-center bg-gradient-to-r from-gray-50 to-white">
+        <div class="container max-w-[85vw] mx-auto px-4 py-20">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="hero-content max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-6" data-i18n="hero-title">Сигурност за Вашия бизнес</h1>
+                    <p class="text-lg text-gray-700 mb-8" data-i18n="hero-desc">Доверете се на локален експерт в киберсигурността. Помагаме на фирми в област Плевен да се защитят от хакерски атаки, изтичане на данни и злонамерен софтуер.</p>
+                    <button class="cta-button bg-secondary text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition" data-i18n="hero-cta">Научете повече</button>
+                </div>
+                <div class="hero-icons flex space-x-8 text-4xl text-secondary mt-8 md:mt-0">
+                    <i class="fas fa-shield-alt"></i>
+                    <i class="fas fa-lock"></i>
+                    <i class="fas fa-network-wired"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container max-w-[85vw] mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12" data-i18n="services-title">Нашите Услуги</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col items-center">
+                    <span class="mb-4">
+                        <!-- Анимирана SVG икона: Shield -->
+                        <svg class="w-12 h-12 text-secondary animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4v5c0 5.25-3.5 9.75-8 11-4.5-1.25-8-5.75-8-11V7l8-4z" />
+                        </svg>
+                    </span>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="service-1-title">Оценка на уязвимости</h3>
+                    <p class="text-gray-600 text-center" data-i18n="service-1-desc">Пълна проверка на вашата система за потенциални рискове</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col items-center">
+                    <span class="mb-4">
+                        <!-- Анимирана SVG икона: Firewall -->
+                        <svg class="w-12 h-12 text-secondary animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <rect x="3" y="7" width="18" height="13" rx="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M3 13h18" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="service-2-title">Защитни стени</h3>
+                    <p class="text-gray-600 text-center" data-i18n="service-2-desc">Настройка и поддръжка на модерни защитни системи</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col items-center">
+                    <span class="mb-4">
+                        <!-- Анимирана SVG икона: Virus -->
+                        <svg class="w-12 h-12 text-secondary animate-spin-slow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.07-7.07l-1.41 1.41M6.34 17.66l-1.41 1.41m12.02 0l-1.41-1.41M6.34 6.34L4.93 4.93" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="service-3-title">Антивирусни решения</h3>
+                    <p class="text-gray-600 text-center" data-i18n="service-3-desc">Комплексна защита от злонамерен софтуер</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col items-center">
+                    <span class="mb-4">
+                        <!-- Анимирана SVG икона: Email Shield -->
+                        <svg class="w-12 h-12 text-secondary animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6M21 8v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8m18 0L12 2 3 8" />
+                        </svg>
+                    </span>
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="service-4-title">Защита на имейл</h3>
+                    <p class="text-gray-600 text-center" data-i18n="service-4-desc">Сигурна комуникация и защита от спам</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- За нас -->
+    <section id="about" class="about py-20 bg-gray-50">
+        <div class="container max-w-[85vw] mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12" data-i18n="about-title">За нас</h2>
+            <div class="about-content grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="mb-4 text-lg text-gray-700" data-i18n="about-desc-1">Ние сме екип от експерти в областта на киберсигурността, посветени на повишаване на дигиталната сигурност на бизнеса в малките населени места.</p>
+                    <p class="text-lg text-gray-700" data-i18n="about-desc-2">Обслужаваме села и градове от област Плевен – от Долни Дъбник до Левски.</p>
+                </div>
+                <div class="about-stats flex justify-center">
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div class="stat">
+                            <h3 class="text-3xl font-bold text-secondary">5+</h3>
+                            <p class="text-gray-600" data-i18n="about-exp">Години опит</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="text-3xl font-bold text-secondary">100+</h3>
+                            <p class="text-gray-600" data-i18n="about-clients">Доволни клиенти</p>
+                        </div>
+                        <div class="stat">
+                            <h3 class="text-3xl font-bold text-secondary">24/7</h3>
+                            <p class="text-gray-600" data-i18n="about-support">Поддръжка</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блог -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="container max-w-[85vw] mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12" data-i18n="blog-title">Блог</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="blog-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col">
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="blog-1-title">Как да разпознаем фишинг имейли</h3>
+                    <p class="text-gray-600 flex-grow" data-i18n="blog-1-desc">Научете основните признаци на фишинг атаки и как да се предпазите...</p>
+                    <a href="blog/how-to-recognize-phishing.md" class="read-more text-secondary hover:underline mt-4" data-i18n="blog-1-readmore">Прочети повече</a>
+                </article>
+                <article class="blog-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col">
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="blog-2-title">Как да създадем силни пароли и да ги защитим</h3>
+                    <p class="text-gray-600 flex-grow" data-i18n="blog-2-desc">Научете как да създавате и управлявате силни пароли за по-добра онлайн сигурност...</p>
+                    <a href="blog/strong-passwords.md" class="read-more text-secondary hover:underline mt-4" data-i18n="blog-2-readmore">Прочети повече</a>
+                </article>
+                <article class="blog-card bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition flex flex-col">
+                    <h3 class="text-xl font-semibold mb-2" data-i18n="blog-3-title">5 начина за подобряване на WiFi сигурността</h3>
+                    <p class="text-gray-600 flex-grow" data-i18n="blog-3-desc">Практически съвети за защита на вашата безжична мрежа...</p>
+                    <a href="#" class="read-more text-secondary hover:underline mt-4" data-i18n="blog-3-readmore">Прочети повече</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Партньори -->
+    <section id="partners" class="py-20 bg-gray-50">
+        <div class="container max-w-[85vw] mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12" data-i18n="partners-title">Нашите Партньори</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="partner-logo p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="w-24 h-12 object-contain mb-2">
+                    <span class="text-sm text-gray-700 mt-2">Microsoft</span>
+                </div>
+                <div class="partner-logo p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" alt="Cisco" class="w-24 h-12 object-contain mb-2">
+                    <span class="text-sm text-gray-700 mt-2">Cisco</span>
+                </div>
+                <div class="partner-logo p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition flex flex-col items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg" alt="Fortinet" class="w-24 h-12 object-contain mb-2">
+                    <span class="text-sm text-gray-700 mt-2">Fortinet</span>
+                </div>
+                <div class="partner-logo p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition flex flex-col items-center">
+                    <img src="https://www.enisa.europa.eu/sites/default/files/all_files/ENISA%20full%20logo.png" alt="ENISA" class="w-24 h-12 object-contain mb-2">
+                    <span class="text-sm text-gray-700 mt-2">ENISA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container max-w-[85vw] mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12" data-i18n="portfolio-title">Портфолио</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                    <p class="italic mb-2" data-i18n="testimonial-1">"КиберСигурност изградиха изключително надеждна защитена инфраструктура за нашата болница. Техният екип прояви професионализъм и експертиза на всеки етап от проекта."</p>
+                    <cite class="text-secondary font-semibold" data-i18n="testimonial-1-author">— Д-р Иванов, Медицински Център "Здравей"</cite>
+                </div>
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-lg">
+                    <p class="italic mb-2" data-i18n="testimonial-2">"Благодарение на КиберСигурност, нашата търговска мрежа работи с пълна сигурност. Техните решения са иновативни и ефективни."</p>
+                    <cite class="text-secondary font-semibold" data-i18n="testimonial-2-author">— Петров, Плевен Маркет</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container max-w-[85vw] mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12" data-i18n="contact-title">Контакти</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <input type="text" name="user_name" placeholder="Вашето име" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent">
+                    </div>
+                    <div>
+                        <input type="email" name="user_email" placeholder="Вашият имейл" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent">
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder="Вашето съобщение" required
+                                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent h-32"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-secondary text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition" data-i18n="contact-send">Изпрати</button>
+                </form>
+                <div class="contact-info space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-phone text-2xl text-secondary"></i>
+                        <p class="text-gray-700">+359 888 123 456</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-envelope text-2xl text-secondary"></i>
+                        <p class="text-gray-700">contact@cybersecurity.bg</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="fas fa-clock text-2xl text-secondary"></i>
+                        <p class="text-gray-700">Понеделник - Петък: 9:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футър -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container max-w-[85vw] mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-4">КиберСигурност</h3>
+                    <p>Вашият надежден партньор в дигиталната защита</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-4">Връзки</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-secondary transition">Начало</a></li>
+                        <li><a href="#services" class="hover:text-secondary transition">Услуги</a></li>
+                        <li><a href="#about" class="hover:text-secondary transition">За нас</a></li>
+                        <li><a href="#contact" class="hover:text-secondary transition">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="text-xl font-bold mb-4">Последвайте ни</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-secondary transition"><i class="fab fa-facebook text-2xl"></i></a>
+                        <a href="#" class="hover:text-secondary transition"><i class="fab fa-linkedin text-2xl"></i></a>
+                        <a href="#" class="hover:text-secondary transition"><i class="fab fa-twitter text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p>&copy; 2024 КиберСигурност. Всички права запазени.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Language Switcher Fixed Button -->
+    <button id="lang-toggle" class="fixed bottom-6 left-6 z-50 p-3 rounded-full bg-white border border-secondary shadow-lg hover:bg-secondary hover:text-white transition focus:outline-none" title="Смени езика">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" stroke="currentColor"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" stroke="currentColor"/>
+        </svg>
+    </button>
+    <!-- Chatbot Widget -->
+    <button id="chatbot-toggle" class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-secondary text-white shadow-lg hover:bg-blue-600 transition focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <div id="chatbot-window" class="fixed bottom-24 right-6 z-50 w-96 max-w-full bg-white border border-gray-300 rounded-xl shadow-2xl flex flex-col hidden chatbot-animate" style="max-height: 500px;">
+        <div class="flex items-center justify-between px-4 py-2 bg-secondary text-white rounded-t-xl">
+            <span class="font-semibold flex items-center gap-2">
+                <span class="inline-block w-6 h-6 rounded-full bg-white flex items-center justify-center"><svg class="w-4 h-4 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" stroke="currentColor"/></svg></span> Чат с нас
+            </span>
+            <button id="chatbot-close" class="text-white hover:text-gray-200 focus:outline-none text-2xl">&times;</button>
+        </div>
+        <div id="chatbot-messages" class="flex-1 p-4 overflow-y-auto text-sm space-y-3 flex flex-col" style="max-height: 350px;">
+            <div class="flex items-start gap-2">
+                <span class="inline-block w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white font-bold">🤖</span>
+                <div class="bg-gray-100 p-2 rounded-lg shadow w-fit">Здравейте! Как можем да помогнем?</div>
+            </div>
+        </div>
+        <form id="chatbot-form" class="flex items-center p-2 border-t border-gray-200 gap-2">
+            <input id="chatbot-input" type="text" placeholder="Вашият въпрос..." class="flex-1 px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-sm" autocomplete="off">
+            <button type="submit" class="px-4 py-2 bg-secondary text-white rounded-lg hover:bg-blue-600 transition">Изпрати</button>
+        </form>
+    </div>
+</body>
+</html> 

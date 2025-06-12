@@ -114,7 +114,6 @@ sigurnosystems/
 ## 📞 Контакти
 
 - GitHub: [@MaciPatrona](https://github.com/MaciPatrona)
-- Email: [Добавете вашия имейл]
 
 ---
 
